@@ -1,1 +1,33 @@
-# ASSIGNMENT-3
+#include <iostream>
+using namespace std;
+
+void classifyCharacter(char ch) {
+    if (ch >= 65 && ch <= 90) {
+        if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+            cout << "Uppercase vowel" << endl;
+        } else {
+            cout << "Uppercase consonant" << endl;
+        }
+    } 
+    else if (ch >= 97 && ch <= 122) {
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            cout << "Lowercase vowel" << endl;
+        } else {
+            cout << "Lowercase consonant" << endl;
+        }
+    } 
+    else {
+        cout << "Not an alphabet" << endl;
+    }
+}
+
+int main() {
+    char input;
+
+    cout << "Enter a single character: ";
+    cin >> input;
+
+    classifyCharacter(input);
+
+    return 0;
+}
